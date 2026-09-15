@@ -32,8 +32,8 @@
   ];
 
   # ── Desktop environment ──────────────────────────────────
-  # Options: "hyprland" "gnome" "plasma"
-  desktop.environment = "plasma";
+  # Options: "hyprland" "gnome" "plasma" "cosmic"
+  desktop.environment = "cosmic";
   # ─────────────────────────────────────────────────────────
 
   # Do NOT change stateVersion after initial install.

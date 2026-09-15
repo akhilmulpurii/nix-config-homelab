@@ -6,6 +6,7 @@
       "dank"
       "gnome"
       "plasma"
+      "cosmic"
     ];
     default = "dank";
     description = "The desktop environment / compositor to enable.";
@@ -15,5 +16,6 @@
     ./environments/dank.nix
     ./environments/gnome.nix
     ./environments/plasma.nix
+    ./environments/cosmic.nix
   ];
 }
