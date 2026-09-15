@@ -16,6 +16,7 @@
     ./modules/docker.nix
     ./modules/nvidia.nix
     ./modules/filesystem.nix
+    ./modules/samba.nix
   ];
 
   # This value defines the first NixOS version installed on this machine.
