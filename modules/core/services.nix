@@ -2,5 +2,5 @@
 
 {
   services.printing.enable = true;
-  services.cockpit.enable  = true;
+  services.cockpit.enable = true;
 }

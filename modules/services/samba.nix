@@ -7,59 +7,59 @@
   ];
 
   services.samba = {
-    enable      = true;
+    enable = true;
     openFirewall = true;
 
     settings = {
       global = {
-        "server string"    = "Servarr";
-        "workgroup"        = "WORKGROUP";
-        "security"         = "user";
-        "map to guest"     = "Bad User";
+        "server string" = "Servarr";
+        "workgroup" = "WORKGROUP";
+        "security" = "user";
+        "map to guest" = "Bad User";
         "name resolve order" = "bcast host";
-        "hosts allow"      = "192.168.0.0/16 10.0.0.0/8 172.16.0.0/12";
-        "hosts deny"       = "0.0.0.0/0";
+        "hosts allow" = "192.168.0.0/16 10.0.0.0/8 172.16.0.0/12";
+        "hosts deny" = "0.0.0.0/0";
 
         # macOS / iOS compatibility
-        "vfs objects"       = "catia fruit streams_xattr";
-        "fruit:nfs_aces"    = "no";
+        "vfs objects" = "catia fruit streams_xattr";
+        "fruit:nfs_aces" = "no";
         "fruit:zero_file_id" = "yes";
-        "fruit:metadata"    = "stream";
-        "fruit:model"       = "MacSamba";
+        "fruit:metadata" = "stream";
+        "fruit:model" = "MacSamba";
       };
 
       data = {
-        path                  = "/data";
-        "force user"          = "akhil";
-        "force group"         = "akhil";
-        "create mask"         = "0774";
-        "force create mode"   = "0774";
-        "directory mask"      = "0775";
+        path = "/data";
+        "force user" = "akhil";
+        "force group" = "akhil";
+        "create mask" = "0774";
+        "force create mode" = "0774";
+        "directory mask" = "0775";
         "force directory mode" = "0775";
-        browseable            = "yes";
-        writable              = "yes";
-        "read only"           = "no";
-        "guest ok"            = "no";
+        browseable = "yes";
+        writable = "yes";
+        "read only" = "no";
+        "guest ok" = "no";
       };
 
       docker = {
-        path                  = "/docker";
-        "force user"          = "akhil";
-        "force group"         = "akhil";
-        "create mask"         = "0774";
-        "force create mode"   = "0774";
-        "directory mask"      = "0775";
+        path = "/docker";
+        "force user" = "akhil";
+        "force group" = "akhil";
+        "create mask" = "0774";
+        "force create mode" = "0774";
+        "directory mask" = "0775";
         "force directory mode" = "0775";
-        browseable            = "yes";
-        writable              = "yes";
-        "read only"           = "no";
-        "guest ok"            = "no";
+        browseable = "yes";
+        writable = "yes";
+        "read only" = "no";
+        "guest ok" = "no";
       };
     };
   };
 
   services.samba-wsdd = {
-    enable      = true;
+    enable = true;
     openFirewall = true;
   };
 }

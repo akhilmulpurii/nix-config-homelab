@@ -2,8 +2,8 @@
 
 {
   options.desktop.environment = lib.mkOption {
-    type        = lib.types.enum [ "hyprland" ];
-    default     = "hyprland";
+    type = lib.types.enum [ "hyprland" ];
+    default = "hyprland";
     description = "The desktop environment / compositor to enable.";
   };
 

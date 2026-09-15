@@ -6,10 +6,10 @@
 
     shellAliases = {
       rebuild = "sudo nixos-rebuild switch";
-      nixcfg  = "cd /etc/nixos && nvim configuration.nix";
-      ls      = "eza --icons=auto";
-      ll      = "eza -la --icons=auto";
-      cat     = "bat";
+      nixcfg = "cd /etc/nixos && nvim configuration.nix";
+      ls = "eza --icons=auto";
+      ll = "eza -la --icons=auto";
+      cat = "bat";
     };
 
     interactiveShellInit = ''

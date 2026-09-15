@@ -2,7 +2,7 @@
 
 {
   virtualisation.docker = {
-    enable                   = true;
+    enable = true;
     daemon.settings.features.cdi = true;
   };
 

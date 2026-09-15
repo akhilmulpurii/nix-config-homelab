@@ -10,7 +10,10 @@
     ];
 
     fontconfig.defaultFonts = {
-      monospace = [ "JetBrainsMono Nerd Font" "MesloLGS NF" ];
+      monospace = [
+        "JetBrainsMono Nerd Font"
+        "MesloLGS NF"
+      ];
     };
   };
 }

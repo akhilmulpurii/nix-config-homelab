@@ -3,7 +3,7 @@
 lib.mkIf (config.desktop.environment == "hyprland") {
 
   programs.hyprland = {
-    enable   = true;
+    enable = true;
     withUWSM = true;
   };
 
@@ -13,21 +13,21 @@ lib.mkIf (config.desktop.environment == "hyprland") {
     enable = true;
 
     systemd = {
-      enable           = true;
+      enable = true;
       restartIfChanged = true;
     };
 
     enableSystemMonitoring = true;
-    enableVPN              = true;
-    enableDynamicTheming   = true;
-    enableAudioWavelength  = true;
-    enableCalendarEvents   = true;
+    enableVPN = true;
+    enableDynamicTheming = true;
+    enableAudioWavelength = true;
+    enableCalendarEvents = true;
   };
 
   services.displayManager.dms-greeter = {
-    enable          = true;
+    enable = true;
     compositor.name = "hyprland";
-    configHome      = "/home/akhil";
+    configHome = "/home/akhil";
   };
 
 }
