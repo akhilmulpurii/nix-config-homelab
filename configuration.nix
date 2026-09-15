@@ -10,6 +10,7 @@
     ./modules/users.nix
     ./modules/desktop.nix
     ./modules/packages.nix
+    ./modules/shell.nix
     ./modules/services.nix
   ];
 

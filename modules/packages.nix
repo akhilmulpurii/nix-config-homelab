@@ -4,9 +4,24 @@
   nixpkgs.config.allowUnfree = true;
 
   environment.systemPackages = with pkgs; [
-    neovim   # text editor (also the fallback for editing configuration.nix)
+    neovim
     wget
     ghostty
+    tmux
+    nixd
+    nil
+    starship
+    zoxide
+    fzf
+    eza
+    bat
+    delta
+    ripgrep
+    fd
+    nodejs
+    zed-editor
+    fastfetch
+
   ];
 
   programs.git = {
