@@ -6,11 +6,10 @@
   environment.systemPackages = with pkgs; [
     neovim
     wget
-    ghostty
+    foot
     tmux
     nixd
     nil
-    starship
     zoxide
     fzf
     eza
@@ -21,7 +20,6 @@
     nodejs
     zed-editor
     fastfetch
-
   ];
 
   programs.git = {
