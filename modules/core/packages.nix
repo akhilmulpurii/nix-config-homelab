@@ -29,8 +29,21 @@
     nodejs
     github-copilot-cli
 
-    # general apps
+    # apps for navigating os
     brave
+    nautilus
+    thunderbird
+    qimgv
+    amberol
+    vlc
+
+    # post install script
+    (pkgs.foot.overrideAttrs (prev: {
+      postInstall = (prev.postInstall or "") + ''
+        rm -f $out/share/applications/foot-client.desktop
+        rm -f $out/share/applications/foot-server.desktop
+      '';
+    }))
   ];
 
   programs.git = {
