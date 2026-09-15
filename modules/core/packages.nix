@@ -19,7 +19,9 @@
     fzf
     zoxide
     fastfetch
-    foot
+    ghostty
+    btop
+    gcc
 
     # nix tooling
     nixd
