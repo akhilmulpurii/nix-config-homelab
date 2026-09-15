@@ -34,7 +34,6 @@
     nautilus
     thunderbird
     qimgv
-    amberol
     vlc
 
     # post install script

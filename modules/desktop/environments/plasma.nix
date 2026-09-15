@@ -1,4 +1,9 @@
-{ config, lib, ... }:
+{
+  config,
+  lib,
+  pkgs,
+  ...
+}:
 
 lib.mkIf (config.desktop.environment == "plasma") {
 
@@ -13,5 +18,16 @@ lib.mkIf (config.desktop.environment == "plasma") {
     displayManager.sddm.wayland.enable = true;
 
   };
+
+  environment.plasma6.excludePackages = with pkgs.kdePackages; [
+    konsole
+    elisa
+    gwenview
+    okular
+    kate
+    ffmpegthumbs
+    krdp
+    dolphin
+  ];
 
 }
