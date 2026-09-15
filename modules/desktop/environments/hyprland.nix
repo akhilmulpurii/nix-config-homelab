@@ -1,9 +1,10 @@
-{ config, pkgs, ... }:
+{ config, lib, ... }:
 
-{
+lib.mkIf (config.desktop.environment == "hyprland") {
+
   programs.hyprland = {
-    enable    = true;
-    withUWSM  = true;
+    enable   = true;
+    withUWSM = true;
   };
 
   programs.dsearch.enable = true;
@@ -16,7 +17,6 @@
       restartIfChanged = true;
     };
 
-    # Core Features
     enableSystemMonitoring = true;
     enableVPN              = true;
     enableDynamicTheming   = true;
@@ -25,8 +25,9 @@
   };
 
   services.displayManager.dms-greeter = {
-    enable         = true;
+    enable          = true;
     compositor.name = "hyprland";
-    configHome     = "/home/akhil";
+    configHome      = "/home/akhil";
   };
+
 }
