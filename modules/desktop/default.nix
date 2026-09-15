@@ -2,15 +2,18 @@
 
 {
   options.desktop.environment = lib.mkOption {
-    type = lib.types.enum [ "hyprland" ];
-    default = "hyprland";
+    type = lib.types.enum [
+      "dank"
+      "gnome"
+      "plasma"
+    ];
+    default = "dank";
     description = "The desktop environment / compositor to enable.";
   };
 
   imports = [
-    ./environments/hyprland.nix
-    # Add new environments here as you create them, e.g.:
-    # ./environments/gnome.nix
-    # ./environments/plasma.nix
+    ./environments/dank.nix
+    ./environments/gnome.nix
+    ./environments/plasma.nix
   ];
 }

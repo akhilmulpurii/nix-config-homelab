@@ -32,8 +32,8 @@
   ];
 
   # ── Desktop environment ──────────────────────────────────
-  # Options: "hyprland"
-  desktop.environment = "hyprland";
+  # Options: "hyprland" "gnome"
+  desktop.environment = "plasma";
   # ─────────────────────────────────────────────────────────
 
   # Do NOT change stateVersion after initial install.
