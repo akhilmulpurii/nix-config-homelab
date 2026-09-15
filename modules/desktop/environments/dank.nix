@@ -1,6 +1,6 @@
 { config, lib, ... }:
 
-lib.mkIf (config.desktop.environment == "hyprland") {
+lib.mkIf (config.desktop.environment == "dank") {
 
   programs.hyprland = {
     enable = true;

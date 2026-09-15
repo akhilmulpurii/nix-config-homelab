@@ -33,7 +33,7 @@
 
   # ── Desktop environment ──────────────────────────────────
   # Options: "hyprland" "gnome"
-  desktop.environment = "gnome";
+  desktop.environment = "dank";
   # ─────────────────────────────────────────────────────────
 
   # Do NOT change stateVersion after initial install.
