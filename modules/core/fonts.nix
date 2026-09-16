@@ -13,7 +13,6 @@
       monospace = [
         "JetBrainsMono Nerd Font"
         "MesloLGS NF"
-        "Noto Sans"
       ];
     };
   };
