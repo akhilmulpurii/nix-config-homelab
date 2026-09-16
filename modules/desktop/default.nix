@@ -1,4 +1,4 @@
-{ config, lib, ... }:
+{ lib, ... }:
 
 {
   options.desktop.environment = lib.mkOption {
@@ -10,6 +10,7 @@
       "xfce"
       "cinnamon"
       "budgie"
+      "lxqt"
     ];
     default = "dank";
     description = "The desktop environment / compositor to enable.";
@@ -23,5 +24,6 @@
     ./environments/xfce.nix
     ./environments/cinnamon.nix
     ./environments/budgie.nix
+    ./environments/lxqt.nix
   ];
 }
