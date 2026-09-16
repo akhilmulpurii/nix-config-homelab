@@ -8,6 +8,7 @@
       "plasma"
       "cosmic"
       "xfce"
+      "cinnamon"
     ];
     default = "dank";
     description = "The desktop environment / compositor to enable.";
@@ -19,5 +20,6 @@
     ./environments/plasma.nix
     ./environments/cosmic.nix
     ./environments/xfce.nix
+    ./environments/cinnamon.nix
   ];
 }
