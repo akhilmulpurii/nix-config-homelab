@@ -9,6 +9,7 @@
       "cosmic"
       "xfce"
       "cinnamon"
+      "budgie"
     ];
     default = "dank";
     description = "The desktop environment / compositor to enable.";
@@ -21,5 +22,6 @@
     ./environments/cosmic.nix
     ./environments/xfce.nix
     ./environments/cinnamon.nix
+    ./environments/budgie.nix
   ];
 }
