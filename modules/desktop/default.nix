@@ -11,6 +11,7 @@
       "cinnamon"
       "budgie"
       "lxqt"
+      "noctalia"
     ];
     default = "dank";
     description = "The desktop environment / compositor to enable.";
@@ -25,5 +26,6 @@
     ./environments/cinnamon.nix
     ./environments/budgie.nix
     ./environments/lxqt.nix
+    ./environments/noctalia.nix
   ];
 }

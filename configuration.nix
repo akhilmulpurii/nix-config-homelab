@@ -32,7 +32,7 @@
   ];
 
   # ── Desktop environment ──────────────────────────────────
-  # Options: "dank" "gnome" "plasma" "cosmic" "xfce" "cinnamon" "budgie" "lxqt"
+  # Options: "dank" "gnome" "plasma" "cosmic" "xfce" "cinnamon" "budgie" "lxqt" "noctalia"
   desktop.environment = "cinnamon";
   # ─────────────────────────────────────────────────────────
 
