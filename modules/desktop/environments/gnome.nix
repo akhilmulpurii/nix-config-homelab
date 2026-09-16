@@ -15,7 +15,6 @@ lib.mkIf (config.desktop.environment == "gnome") {
   environment.gnome.excludePackages = (
     with pkgs;
     [
-      gnome-photos
       gnome-maps
       gnome-contacts
       gnome-connections

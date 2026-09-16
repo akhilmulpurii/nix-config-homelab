@@ -1,21 +1,10 @@
 { ... }:
 
+# Enables fish as a valid login shell system-wide (registers it in
+# /etc/shells and generates completions for system packages).
+#
+# Per-user customization (aliases, interactive init, etc.) lives in
+# home-manager: see ./home/akhil/modules/shell.nix
 {
-  programs.fish = {
-    enable = true;
-
-    shellAliases = {
-      rebuild = "sudo nixos-rebuild switch";
-      nixcfg = "cd /etc/nixos && nvim configuration.nix";
-      ls = "eza --icons=auto";
-      ll = "eza -la --icons=auto";
-      cat = "bat";
-    };
-
-    interactiveShellInit = ''
-      set -g fish_greeting
-      zoxide init fish --cmd cd | source
-      fzf --fish | source
-    '';
-  };
+  programs.fish.enable = true;
 }
