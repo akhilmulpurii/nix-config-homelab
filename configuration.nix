@@ -33,7 +33,7 @@
 
   # ── Desktop environment ──────────────────────────────────
   # Options: "dank" "gnome" "plasma" "cosmic"
-  desktop.environment = "dank";
+  desktop.environment = "xfce";
   # ─────────────────────────────────────────────────────────
 
   # Do NOT change stateVersion after initial install.
