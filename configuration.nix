@@ -32,7 +32,7 @@
   ];
 
   # ── Desktop environment ──────────────────────────────────
-  # Options: "dank" "gnome" "plasma" "cosmic"
+  # Options: "dank" "gnome" "plasma" "cosmic" "xfce"
   desktop.environment = "xfce";
   # ─────────────────────────────────────────────────────────
 
