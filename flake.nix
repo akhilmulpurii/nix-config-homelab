@@ -8,6 +8,12 @@
       url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+
+    # Not packaged in nixpkgs; only installable via this flake.
+    caelestia-shell = {
+      url = "github:caelestia-dots/shell";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
   outputs =
@@ -16,13 +22,14 @@
       nixpkgs,
       home-manager,
       ...
-    }:
+    }@inputs:
     let
       system = "x86_64-linux";
     in
     {
       nixosConfigurations.nixos = nixpkgs.lib.nixosSystem {
         inherit system;
+        specialArgs = { inherit inputs; };
 
         modules = [
           ./configuration.nix
@@ -32,6 +39,7 @@
             home-manager.useGlobalPkgs = true;
             home-manager.useUserPackages = true;
             home-manager.backupFileExtension = "backup";
+            home-manager.extraSpecialArgs = { inherit inputs; };
             home-manager.users.akhil = import ./home/akhil/home.nix;
           }
         ];

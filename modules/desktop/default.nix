@@ -3,7 +3,6 @@
 {
   options.desktop.environment = lib.mkOption {
     type = lib.types.enum [
-      "dank"
       "gnome"
       "plasma"
       "cosmic"
@@ -12,13 +11,13 @@
       "budgie"
       "lxqt"
       "noctalia"
+      "caelestia"
     ];
-    default = "dank";
+    default = "cinnamon";
     description = "The desktop environment / compositor to enable.";
   };
 
   imports = [
-    ./environments/dank.nix
     ./environments/gnome.nix
     ./environments/plasma.nix
     ./environments/cosmic.nix
@@ -27,5 +26,6 @@
     ./environments/budgie.nix
     ./environments/lxqt.nix
     ./environments/noctalia.nix
+    ./environments/caelestia.nix
   ];
 }

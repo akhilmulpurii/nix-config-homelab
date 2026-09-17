@@ -32,8 +32,8 @@
   ];
 
   # ── Desktop environment ──────────────────────────────────
-  # Options: "dank" "gnome" "plasma" "cosmic" "xfce" "cinnamon" "budgie" "lxqt" "noctalia"
-  desktop.environment = "cinnamon";
+  # Options: "gnome" "plasma" "cosmic" "xfce" "cinnamon" "budgie" "lxqt" "noctalia" "caelestia"
+  desktop.environment = "caelestia";
   # ─────────────────────────────────────────────────────────
 
   # Do NOT change stateVersion after initial install.
