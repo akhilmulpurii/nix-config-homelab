@@ -37,5 +37,10 @@
     thunderbird
     qimgv
     vlc
+
+    # keychain — Secret Service provider shared across all DEs
+    gnome-keyring   # the daemon (also provides the D-Bus service)
+    seahorse        # GUI keyring manager (view/edit/delete stored secrets)
+    libsecret       # client library used by most apps to access the keyring
   ];
 }

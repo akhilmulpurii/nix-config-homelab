@@ -19,6 +19,10 @@ lib.mkIf (config.desktop.environment == "plasma") {
 
   };
 
+  # Disable KWallet so it does not compete with gnome-keyring (our global
+  # Secret Service provider). Applications will use gnome-keyring instead.
+  security.pam.services.kwallet.enable = lib.mkForce false;
+
   environment.plasma6.excludePackages = with pkgs.kdePackages; [
     konsole
     elisa
