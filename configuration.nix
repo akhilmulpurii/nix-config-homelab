@@ -22,6 +22,7 @@
     # Hardware
     ./modules/hardware/nvidia.nix
     ./modules/hardware/filesystem.nix
+    ./modules/hardware/bluetooth.nix
 
     # Desktop — toggle with `desktop.environment` below
     ./modules/desktop/default.nix
