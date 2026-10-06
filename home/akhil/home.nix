@@ -5,7 +5,7 @@
     ./modules/git.nix
     ./modules/shell.nix
     ./modules/noctalia.nix
-    ./modules/caelestia.nix
+    ./modules/pr43.nix
   ];
 
   home.username = "akhil";
