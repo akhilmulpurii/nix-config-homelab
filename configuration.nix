@@ -34,7 +34,7 @@
 
   # ── Desktop environment ──────────────────────────────────
   # Options: "gnome" "plasma" "cosmic" "xfce" "cinnamon" "budgie" "lxqt" "noctalia" "caelestia" "pr43"
-  desktop.environment = "pr43";
+  desktop.environment = "cinnamon";
   # ─────────────────────────────────────────────────────────
 
   # Do NOT change stateVersion after initial install.

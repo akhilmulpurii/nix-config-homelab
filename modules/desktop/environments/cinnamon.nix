@@ -16,6 +16,7 @@ lib.mkIf (config.desktop.environment == "cinnamon") {
   services.libinput.enable = true;
   services.displayManager.defaultSession = "cinnamon";
 
+  environment.systemPackages = [ pkgs.arc-theme ];
   environment.cinnamon.excludePackages = (
     with pkgs;
     [
