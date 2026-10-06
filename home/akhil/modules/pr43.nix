@@ -1,28 +1,14 @@
 { lib, osConfig, pkgs, config, ... }:
 
 # Home-Manager module for the 43PR Hyprland dotfiles.
-#
-# Strategy: "live repo" approach — the dotfiles repo is cloned once to
-# ~/dotfiles and Home-Manager points xdg.configFile entries at it via
-# mkOutOfStoreSymlink.  This mirrors the upstream symlink-based workflow,
-# lets you `git pull && theme apply` without a rebuild, and keeps every
-# edit live instantly.
-#
-# Runtime-generated files (theme colors for kitty, GTK, hyprlock, rofi)
-# are written by `theme.py` at runtime and are intentionally NOT managed
-# by Home-Manager, so they survive rebuilds.
-
 lib.mkIf (osConfig.desktop.environment == "pr43") {
 
   # ── User-level packages ──────────────────────────────────
   home.packages = with pkgs; [
-    # Required by theme.py (the `theme` fish function in shell.nix)
     python3
   ];
 
   # ── Session variables ────────────────────────────────────
-  # Mirrors the hl.env() calls in hyprland.lua so the values are
-  # available to every systemd user service and login shell too.
   home.sessionVariables = {
     XCURSOR_SIZE       = "14";
     QT_QPA_PLATFORM    = "wayland";
@@ -30,17 +16,9 @@ lib.mkIf (osConfig.desktop.environment == "pr43") {
   };
 
   # ── XDG config files ─────────────────────────────────────
-  # Each entry is a symlink into ~/dotfiles/.config/<dir> via
-  # mkOutOfStoreSymlink, keeping the repo as the single source of
-  # truth (identical to the Arch symlink strategy).
-  #
-  # Runtime-generated files (matugen.conf, colors.css, colors.rasi,
-  # hyprlock-colors.conf) are NOT listed here — they are written by
-  # `theme.py` and must remain mutable.
 
   xdg.configFile = {
     # Hyprland Lua config (hyprland.lua, keybinds.lua, look.lua,
-    # rules.lua, monitors.lua, hyprland-gui.lua, scripts/)
     "hypr" = {
       source = config.lib.file.mkOutOfStoreSymlink
         "${config.home.homeDirectory}/dotfiles/.config/hypr";
@@ -126,10 +104,6 @@ lib.mkIf (osConfig.desktop.environment == "pr43") {
   };
 
   # ── Activation: clone repo + bootstrap theme ──────────────
-  # Runs after every `nixos-rebuild switch` / `home-manager switch`.
-  # • Clones the dotfiles repo on first install (skips if already present).
-  # • Runs `theme.py apply` once so the generated color files exist before
-  #   the first Hyprland session starts.
   home.activation.clone43prDotfiles = lib.hm.dag.entryAfter [ "writeBoundary" ] ''
     DOTFILES_DIR="$HOME/dotfiles"
 
